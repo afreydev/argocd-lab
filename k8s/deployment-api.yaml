@@ -21,7 +21,6 @@ spec:
       containers:
         - name: api
           image: afreydev/companies-backend:latest
-          imagePullPolicy: Never
           ports:
             - name: http
               containerPort: 5000
