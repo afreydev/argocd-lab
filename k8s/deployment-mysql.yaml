@@ -17,7 +17,6 @@ spec:
       containers:
         - name: mysql
           image: afreydev/companies-db:latest
-          imagePullPolicy: Never
           ports:
             - name: mysql
               containerPort: 3306
