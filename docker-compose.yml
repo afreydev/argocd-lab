@@ -1,0 +1,42 @@
+version: "3.3"
+services:
+    flask:
+        build:
+            context: ./api
+            dockerfile: Dockerfile
+        image: afreydev/companies-backend:latest
+        working_dir: /opt/api/
+        command: bash run.sh
+        ports:
+            - 5000:5000
+        env_file:
+            - ./.env
+        #environment:
+        #    MYSQL_HOST: mysql
+        #    MYSQL_DATABASE: companies
+        #    MYSQL_USER: companies
+        #    MYSQL_PASSWORD: password
+        #    APP_ENV: DEV
+        stdin_open: true
+        tty: true
+        depends_on:
+            - mysql
+        expose:
+            - 5000
+        links:
+            - mysql
+    mysql:
+        build:
+            context: ./db
+            dockerfile: Dockerfile
+        image: afreydev/companies-db:latest
+        ports:
+            - 3306:3306
+        env_file:
+            - ./.env
+        #environment:
+        #    MYSQL_ROOT_PASSWORD: password
+        #    MYSQL_DATABASE: companies
+        #    MYSQL_USER: companies
+        #    MYSQL_PASSWORD: password
+    
