@@ -1,0 +1,10 @@
+# Default values for Morpheus.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: "afreydev/companies-backend"
+  tag: "latest"
+
+deployment:
+  replicas: 4
