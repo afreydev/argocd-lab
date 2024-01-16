@@ -20,11 +20,11 @@ spec:
     spec:
       containers:
         - name: api
-          image: afreydev/companies-backend:latest
+          image: afreydev/companies-backend:customhash
           ports:
             - name: http
               containerPort: 5000
-          command: q
+          command:
           - bash
           - run.sh
           env:
