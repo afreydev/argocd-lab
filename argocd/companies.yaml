@@ -9,6 +9,6 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: k8s
+    path: helm
     repoURL: "https://github.com/afreydev/argocd-lab.git"
     targetRevision: main
