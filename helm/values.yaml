@@ -4,7 +4,7 @@
 
 image:
   repository: "afreydev/companies-backend"
-  tag: "latest"
+  tag: "customhash"
 
 deployment:
   replicas: 4
